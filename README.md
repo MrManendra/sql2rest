@@ -34,18 +34,18 @@ This tool is written in java hence its a platform independent. Anyone can use th
 - http://localhost:8080/api/reloadProperties
 
 ## EXAMPLES - 
-##case-1
+## case-1
 - write the below query, to get rest api like this - http://localhost:8080/api/fetchEmployeeByJoiningDate?fromDate=2019-09-15&toDate=2019-09-16
 
 fetchEmployeeByJoiningDate=select * from employee where joining_date between ':fromDate' and ':toDate';
 
-##case-2
+## case-2
 
 - like wise we can access this api - http://localhost:8080/api/fetchEmployeeByIds?empIds='ABC-123','ABC-456'
 
 fetchEmployeeByIds=select * from employee where emp_id in(:empIds);
 
-##case-3
+## case-3
 
 - http://localhost:8080/api/fetchEmployeeByEmail?email=test@gmail.com
 
