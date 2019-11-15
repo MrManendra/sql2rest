@@ -21,7 +21,7 @@ This tool is written in java hence its a platform independent. Anyone can use th
 - mvn clean install
  
 ### Run the application:
-- download the distribution folder(google.drive.link here) add the db configuration, sql query and run the jar using below command
+- download the sample-distribution folder add the db configuration, sql query and run the jar using below command
 - java -jar sql2rest-1.0-jar-with-dependencies.jar
 - check the application is running correctly by hitting this url(http://localhost:8080/api/health/check)
 - to access the api for written query is very simple, for e.g - if the query is written as below
