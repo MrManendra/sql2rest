@@ -50,13 +50,22 @@ fetchEmployeeByIds=select * from employee where emp_id in(:empIds);
 fetchEmployeeByEmail=select * from employee where email=':email';
 
 ### SCREENSHOTS:
- - Download Sample Distribution ![Alt text](./docs/images/download-sample-distribution.png "Download Sample Distribution")
- - Run the jar ![Alt text](./docs/images/run_the_jar.png?raw=true "Run the jar")
- - health check api ![Alt text](./docs/images/health-check-api.png?raw=true "health check api")
- - fetchAllEmployee api ![Alt text](./docs/images/fetchAllEmployeeApi.png?raw=true "fetchAllEmployee api")
- - fetchEmployeeByJoiningDate api ![Alt text](./docs/images/fetchEmployeeByJoiningDateApi.png?raw=true "fetchEmployeeByJoiningDate api")
- - fetchEmployeeByIds api ![Alt text](./docs/images/fetchEmployeeByIdsApi.png?raw=true "fetchEmployeeByIds api")
- - fetchEmployeeByEmail api ![Alt text](./docs/images/fetchEmployeeByEmailApi.png?raw=true "fetchEmployeeByEmail api")
- - sql2rest-log ![Alt text](./docs/images/sql2rest-log.png?raw=true "sql2rest-log")
- - console-log ![Alt text](./docs/images/console-log.png?raw=true "console-log")
+ - ### Download Sample Distribution 
+  ![Alt text](./docs/images/screenshot/download-sample-distribution.png?raw=true "Download Sample Distribution")
+ - ### Run the jar 
+ - ![Alt text](./docs/images/screenshot/run_the_jar.png?raw=true "Run the jar")
+ - ### health check api 
+ - ![Alt text](./docs/images/screenshot/health-check-api.png?raw=true "health check api")
+ - ### fetchAllEmployee api 
+ - ![Alt text](./docs/images/screenshot/fetchAllEmployeeApi.png?raw=true "fetchAllEmployee api")
+ - ### fetchEmployeeByJoiningDate api 
+ - ![Alt text](./docs/images/screenshot/fetchEmployeeByJoiningDateApi.png?raw=true "fetchEmployeeByJoiningDate api")
+ - ### fetchEmployeeByIds api 
+ - ![Alt text](./docs/images/screenshot/fetchEmployeeByIdsApi.png?raw=true "fetchEmployeeByIds api")
+ - ### fetchEmployeeByEmail api 
+ - ![Alt text](./docs/images/screenshot/fetchEmployeeByEmailApi.png?raw=true "fetchEmployeeByEmail api")
+ - ### sql2rest-log 
+ - ![Alt text](./docs/images/screenshot/sql2rest-log.png?raw=true "sql2rest-log")
+ - ### console-log 
+ - ![Alt text](./docs/images/screenshot/console-log.png?raw=true "console-log")
  
