@@ -51,7 +51,7 @@ fetchEmployeeByEmail=select * from employee where email=':email';
 
 ### SCREENSHOTS:
  - ### Download Sample Distribution 
-  ![Alt text](./docs/images/screenshot/download-sample-distribution.png?raw=true "Download Sample Distribution")
+ - ![Alt text](./docs/images/screenshot/download-sample-distribution.png?raw=true "Download Sample Distribution")
  - ### Run the jar 
  - ![Alt text](./docs/images/screenshot/run_the_jar.png?raw=true "Run the jar")
  - ### health check api 
