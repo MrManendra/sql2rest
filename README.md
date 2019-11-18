@@ -52,6 +52,12 @@ fetchEmployeeByEmail=select * from employee where email=':email';
 ### SCREENSHOTS:
  - ### Download Sample Distribution 
  - ![Alt text](./docs/images/screenshot/download-sample-distribution.png?raw=true "Download Sample Distribution")
+ - ### config.properties 
+ - ![Alt text](./docs/images/screenshot/config.properties.png?raw=true "config.properties")
+ - ### sql.properties
+ - ![Alt text](./docs/images/screenshot/sql.properties.png?raw=true "sql.properties")
+ - ### test-data.sql 
+ - ![Alt text](./docs/images/screenshot/test-data.sql.png?raw=true "test-data.sql")
  - ### Run the jar 
  - ![Alt text](./docs/images/screenshot/run_the_jar.png?raw=true "Run the jar")
  - ### health check api 
