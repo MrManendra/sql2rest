@@ -18,8 +18,9 @@ This tool is written in java hence its a platform independent. Anyone can use th
 - mvn clean install
  
 ### Run the application:
-- download the sample-distribution folder add the db configuration, sql query and run the jar using below command
+- download the sample-distribution folder update the db configuration, sql query and run the jar using below command
 - java -jar sql2rest-1.0-jar-with-dependencies.jar
+- note - you can use test-data.sql in your mysql database for testing purpose
 - check the application is running correctly by hitting this url(http://localhost:8080/api/health/check)
 - to access the api for written query is very simple, for e.g - if the query is written as below
 - fetchAllEmployee=select * from employee;
@@ -32,7 +33,7 @@ This tool is written in java hence its a platform independent. Anyone can use th
 
 ## EXAMPLES - 
 ## case-1
-- write the below query, to get rest api like this - http://localhost:8080/api/fetchEmployeeByJoiningDate?fromDate=2019-09-15&toDate=2019-09-16
+- write the below query, to get rest api like this - http://localhost:8080/api/fetchEmployeeByJoiningDate?fromDate=2018-08-15&toDate=2019-09-16
 
 fetchEmployeeByJoiningDate=select * from employee where joining_date between ':fromDate' and ':toDate';
 
@@ -47,3 +48,15 @@ fetchEmployeeByIds=select * from employee where emp_id in(:empIds);
 - http://localhost:8080/api/fetchEmployeeByEmail?email=test@gmail.com
 
 fetchEmployeeByEmail=select * from employee where email=':email';
+
+### SCREENSHOTS:
+ - Download Sample Distribution ![Alt text](./docs/images/download-sample-distribution.png "Download Sample Distribution")
+ - Run the jar ![Alt text](./docs/images/run_the_jar.png?raw=true "Run the jar")
+ - health check api ![Alt text](./docs/images/health-check-api.png?raw=true "health check api")
+ - fetchAllEmployee api ![Alt text](./docs/images/fetchAllEmployeeApi.png?raw=true "fetchAllEmployee api")
+ - fetchEmployeeByJoiningDate api ![Alt text](./docs/images/fetchEmployeeByJoiningDateApi.png?raw=true "fetchEmployeeByJoiningDate api")
+ - fetchEmployeeByIds api ![Alt text](./docs/images/fetchEmployeeByIdsApi.png?raw=true "fetchEmployeeByIds api")
+ - fetchEmployeeByEmail api ![Alt text](./docs/images/fetchEmployeeByEmailApi.png?raw=true "fetchEmployeeByEmail api")
+ - sql2rest-log ![Alt text](./docs/images/sql2rest-log.png?raw=true "sql2rest-log")
+ - console-log ![Alt text](./docs/images/console-log.png?raw=true "console-log")
+ 
