@@ -14,9 +14,6 @@ This tool is written in java hence its a platform independent. Anyone can use th
 - Spring-5.1.3.RELEASE
 - Spark-2.7.2
 
-### TODO:
- - Logger
-
 ### Build the application:
 - mvn clean install
  

@@ -1,12 +1,15 @@
 package com.sql2rest.db.connection;
 
 import com.sql2rest.util.PropertyUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnectionUtil {
+    private static final Logger logger = LoggerFactory.getLogger(DBConnectionUtil.class);
 
     private static final String DRIVER = PropertyUtils.getProperty("jdbc.driver");
     private static final String HOST = PropertyUtils.getProperty("db.server");
@@ -19,10 +22,9 @@ public class DBConnectionUtil {
     static {
         try {
             Class.forName(DRIVER);
-            System.out.println("Driver Registered!");
+            logger.info("Driver Registered!");
         } catch (ClassNotFoundException e) {
-            System.out.println("Where is your Driver?");
-            e.printStackTrace();
+            logger.error("Where is your Driver?", e);
         }
     }
 
@@ -32,8 +34,7 @@ public class DBConnectionUtil {
             connection.setReadOnly(true);
             return  connection;
         } catch (SQLException e) {
-            System.out.println("Connection for db Failed! Check output console");
-            e.printStackTrace();
+            logger.error("Unable to get the connection from database", e);
             return null;
         }
     }
@@ -43,7 +44,7 @@ public class DBConnectionUtil {
             try {
                 connection.close();
             } catch (SQLException e) {
-                e.printStackTrace();
+                logger.error("Unable to close the database connection", e);
             }
         }
     }

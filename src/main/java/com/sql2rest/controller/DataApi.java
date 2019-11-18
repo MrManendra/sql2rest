@@ -43,13 +43,13 @@ public class DataApi {
                 res.type("application/json");
 
                 String query = PropertyUtils.getSqlProperty(key);
-                System.out.println("query name="+key+", query value from file="+query);
+                logger.info("query name={}, query value from file={}", key, query);
                 Set<String> queryParamKeys = req.queryParams();
                 for (String queryParamKey : queryParamKeys) {
                     query = query.replace(":" + queryParamKey, req.queryParams(queryParamKey));
                 }
 
-                System.out.println("final query=" + query);
+                logger.info("final query={}", query);
 
                 String result = sqlFetcher.fetch(query);
                 return result;

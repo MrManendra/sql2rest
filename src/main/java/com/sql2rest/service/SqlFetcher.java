@@ -4,12 +4,15 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.sql2rest.db.connection.DBConnectionUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.sql.*;
 
 @Service
 public class SqlFetcher {
+    private static final Logger logger = LoggerFactory.getLogger(SqlFetcher.class);
 
     public String fetch(String query) {
 
@@ -18,9 +21,9 @@ public class SqlFetcher {
             connection = DBConnectionUtil.getConnection();
 
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            System.out.println("Executing query.");
+            logger.info("Executing query.");
             ResultSet resultSet = preparedStatement.executeQuery();
-            System.out.println("Query executed.");
+            logger.info("Query executed.");
             JsonArray jsonArray = new JsonArray();
             while (resultSet.next()){
                 ResultSetMetaData metaData = resultSet.getMetaData();
@@ -32,7 +35,7 @@ public class SqlFetcher {
             }
             return jsonArray.toString();
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("Unable to execute the query- {}", query, e);
             return e.getMessage();
         } finally {
             DBConnectionUtil.close(connection);
