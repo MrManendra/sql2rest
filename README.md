@@ -10,9 +10,9 @@ This tool is written in java hence its a platform independent. Anyone can use th
  - Open for any relational database management system(RDBMS)
  
 ### Tech Stack:
-- Java-9
-- Spring
-- Spark
+- Java-1.8
+- Spring-5.1.3.RELEASE
+- Spark-2.7.2
 
 ### TODO:
  - Logger
