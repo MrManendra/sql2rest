@@ -39,7 +39,9 @@ public class PropertyUtils {
         if(configProp.isEmpty()){
             loadProps();
         }
-
+        if(!configProp.containsKey(key)){
+            return System.getenv(key);
+        }
         final String value = (String)configProp.get(key);
         return  value;
     }
